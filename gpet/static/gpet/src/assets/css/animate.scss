@@ -1,0 +1,111 @@
+.animated {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+@keyframes slideInfinite {
+    form {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(-1488px)
+    }
+}
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  6.25% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  12.5% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  18.75% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  21.25% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  25%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes click {
+  0%,
+  100% {
+    -webkit-transform:  scale(0.9);
+    transform: scale(0.9);
+    left: 586px;
+    top: 390px;
+  }
+  50%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    left: 560px;
+    top: 380px;
+  }
+}
+@keyframes hint {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}

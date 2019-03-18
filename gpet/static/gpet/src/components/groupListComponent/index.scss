@@ -1,0 +1,245 @@
+/* 群列表页面 */
+.group-wrapper {
+    width: 100%;
+    height: calc(100% - 160px);
+    position: relative;
+}
+
+.group-wrapper .inner {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+.group-wrapper .loadingBox {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    font-size: 36px;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+.group-wrapper .header {
+    width: 750px;
+    height: 206px;
+    background: url('/images/banner/pic_banner1.png') no-repeat;
+    background-size: cover;
+}
+
+/*修改机器人昵称*/
+.group-wrapper .chRobotname {
+    width: 552px;
+    height: 479px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.group-wrapper .chRobotname .title {
+    font-family: PingFangSC-Medium;
+    font-size: 32px;
+    color: #333333;
+    margin-top: 70px;
+    margin-bottom: 60px;
+
+}
+
+.group-wrapper .chRobotname .robot-input {
+    width: 330px;
+    height: 84px;
+    line-height: 86px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 100px;
+    padding: 0 60px;
+}
+
+.group-wrapper .chRobotname .robot-error {
+    color: red;
+    position: absolute;
+    left: 76px;
+    top: 94px;
+    font-size: 26px;
+}
+
+.group-wrapper .chRobotname .robot-input.error {
+    border: 1px solid red;
+}
+
+.group-wrapper .chRobotname .robot-btn {
+    margin-top: 50px;
+    width: 450px;
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+    background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+    border-radius: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.group-wrapper .chRobotname .closeBtn {
+    right: -62px;
+    top: -52px;
+}
+
+.group-wrapper .groupItem {
+    margin: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    border-radius: 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+    position: relative;
+}
+
+.group-wrapper .groupItem .cardHeader {
+    padding: 34px 30px 30px;
+}
+
+.group-wrapper .groupItem.groupItem-two .cardHeader {
+    padding: 34px 30px;
+}
+
+.group-wrapper .groupItem .cardHeader div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.group-wrapper .groupItem .cardHeader div:last-child {
+    margin-bottom: 0px;
+}
+
+.group-wrapper .groupItem .cardHeader .status {
+    color: #55A0FF;
+}
+
+
+.group-wrapper .groupItem .cardHeader .time {
+    color: #999999;
+}
+
+.group-wrapper .groupItem .cardHeader .icon_star {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("/images/newicon/star_big.png") no-repeat;
+    background-size: 36px 36px;
+    margin-right: 2px;
+}
+.group-wrapper .groupItem .cardHeader .groupName {
+    font-family: PingFangSC-Medium;
+    color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 520px;
+}
+.group-wrapper .groupItem .cardHeader .unexpand {
+    color: #999999;
+    display: inline-block;
+}
+.group-wrapper .groupItem .cardDetail {
+    border-top: 1px solid #DADEE2;
+    padding-top: 20px;
+    padding-bottom: 36px;
+    margin: 0 30px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group-wrapper .groupItem .cardDetail .delBtn {
+    text-align: center;
+    border: 1px solid #55A0FF;
+    border-radius: 100px;
+    width: 120px;
+    height: 54px;
+    line-height: 54px;
+    color: #55A0FF;
+}
+
+.group-wrapper .groupItem .cardDetail .robotNameBox .nickname {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 357px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.group-wrapper .groupItem .cardDetail .robotNameBox .chNameBtn {
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #5D90C5;
+    text-decoration: underline;
+    margin-left: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.group-wrapper .buttonBox {
+    text-align: center;
+}
+
+.group-wrapper .buttonBox .importBtn {
+    margin: 30px auto;
+}
+
+/*switch css效果*/
+
+.group-wrapper .groupItem .cardDetail .launchSwitch {
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #999999;
+    display: flex;
+}
+
+
+.launchSwitch .bg {
+    background: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    border-radius: 25px;
+    width: 76px;
+    height: 46px;
+}
+
+.launchSwitch .bg .circle {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+    float: left;
+    transition: all ease-in-out .3s;
+    width: 42px;
+    height: 42px;
+    border-radius: 25px;
+    margin: 2px;
+}
+
+.launchSwitch .bg.open {
+    background: #55A0FF;
+    border: 1px solid #55A0FF;
+}
+
+.launchSwitch .bg.open .circle {
+    margin-left: 31px;
+}
+

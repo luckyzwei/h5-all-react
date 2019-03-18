@@ -1,0 +1,150 @@
+@import '../../../assets/css/custom';
+.selectWrapper {
+    float: left;
+    height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+    margin-right: 20px;
+    cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.selectWrapper ul {
+    list-style: none;
+}
+
+.selectLabel {
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+    @extend %font-393D3B-14px;
+    color: #393D3B;
+}
+
+.selectWrapper .titleInput {
+    width: 148px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #393d3b;
+    text-indent: 12px;
+    border-radius: 2px;
+}
+
+.selectWrapper .selectBox {
+    display: inline-block;
+    height: 32px;
+    width: 200px;
+    position: relative;
+    font-weight: 400;
+    border: 0 none;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.selectWrapper .selectBox .selIcon {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+  transition: all 0.3s ease-in-out 0s;
+}
+.selectWrapper .selectBox .selIcon::after{
+  display: inline-block;
+  content: " ";
+  height: 9px;
+  width: 9px;
+  border-width: 0 1.4px 1.4px 0;
+  border-color: #BFC0BF;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform-origin: center;
+  transition: transform .3s;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.selectArrow {
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition: transform .3s;
+}
+
+.selectOption {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    line-height: 32px;
+    text-indent: 16px;
+    font-size: 14px;
+    color: #BFC0BF;
+    border-radius: 2px;
+}
+.selectOption:hover{
+  border: 1px solid #58A7F8 !important;
+}
+.selectBox em {
+    font-style: normal;
+    display: inline;
+    color: #BFC0BF;
+    margin-left: 0;
+    @extend %font-14px-400;
+}
+
+.selectBox input {
+    width: 150px;
+    height: 100%;
+    outline: none;
+    border: 0 none !important;
+    font-size: 14px;
+}
+
+.selectBox .selectTip {
+    color: #444444;
+    @extend %font-14px-400;
+}
+
+.optionUl {
+  position: absolute;
+  top: 100%;
+  z-index: 2000;
+  width: 100%;
+  text-align: left;
+  background: #FFFFFF;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  max-height: 170px;
+  overflow: auto;
+}
+
+.selectBox ul {
+    margin-bottom: 0;
+    max-height: 198px;
+    overflow: auto;
+    padding: 4px 0;
+  text-align: center;
+}
+
+.selectBox li {
+  @extend %font-13px-light;
+  color: #393D3B;
+  height: 28px;
+  line-height: 28px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.selectBox li:hover {
+  background: #288BF2;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 15px;
+
+}

@@ -1,0 +1,160 @@
+/* 群数据页面 */
+.data-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.data-wrapper .title {
+    width: 100%;
+    height: 206px;
+    background: url('/images/banner/title9.png') no-repeat;
+    background-size: cover;
+    padding-top: 140px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.data-wrapper .dataList {
+    height: calc(100% - 206px);
+    overflow: auto;
+    background: #F7F8F9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.data-wrapper .dataList .data-master {
+    height: 384px;
+}
+
+.data-wrapper .dataList .data-member {
+    height: 259px;
+}
+
+.data-wrapper .dataList .dataItem {
+    padding: 30px 30px 0;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.data-wrapper .dataList .dataItem .header {
+    height: 92px;
+    border-bottom: 1px solid #DADEE2;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.data-wrapper .dataList .dataItem .header .label {
+    width: 72px;
+    height: 40px;
+    border: 1px solid #55A0FF;
+    border-radius: 4px;
+    color: #55A0FF;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 14px;
+    flex: none;
+}
+
+.data-wrapper .dataList .dataItem .row {
+    display: flex;
+    padding: 30px 0;
+}
+
+.data-wrapper .dataList .dataItem .left {
+    width: 120px;
+    margin-right: 64px;
+    flex: none;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #333333;
+}
+
+.data-wrapper .dataList .dataItem .center {
+    width: 200px;
+    flex: none;
+}
+
+.data-wrapper .dataList .dataItem .center .memberTitle {
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #999999;
+    text-indent: 10px;
+}
+
+.data-wrapper .dataList .dataItem .svgBox {
+    // position: relative;
+    // margin-bottom: 20px;
+    // width: 128px;
+    // height: 128px;
+
+
+        position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-wrapper .dataList .dataItem .svgBox .memberNum {
+    font-size: 30px;
+    color: #55A0FF;
+    position: absolute;
+    left: 48%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+.data-wrapper .dataList .dataItem .svgBox .dataCircleBox{
+    width: 130px;
+    height: 130px;
+}
+.data-wrapper .dataList .dataItem .right .number {
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #999999;
+}
+
+.data-wrapper .dataList .dataItem .center .number {
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #55A0FF;
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+.data-wrapper .dataList .dataItem .center .number:last-child {
+    margin: 0;
+}
+
+.data-wrapper .dataList .dataItem .center .number span {
+    color: #999999;
+}
+
+.data-wrapper .dataList .dataItem .right .bar {
+    transition: all ease-in-out .4s;
+    min-width: 2px;
+    max-width: 270px;
+}
+
+.data-wrapper .dataList .dataItem .right .bar:nth-child(1) {
+    opacity: 0.3;
+    background: #55A0FF;
+    height: 15px;
+    margin-top: 12px;
+}
+
+.data-wrapper .dataList .dataItem .right .bar:nth-child(2) {
+    background: #55A0FF;
+    margin-top: 42px;
+    height: 15px;
+}

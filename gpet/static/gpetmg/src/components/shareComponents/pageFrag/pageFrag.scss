@@ -1,0 +1,69 @@
+/*分页样式*/
+
+.pageFooter {
+  display: flex;
+}
+
+.pageFooter ul {
+  margin: 28px auto;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #B5BDC6;
+}
+
+.pageFooter li {
+  float: left;
+  margin: 0 5px;
+  height: 27px;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pageFooter .pages {
+  border: 1px solid #DADEE2;
+  border-radius: 2px;
+  width: 26px;
+}
+.pageFooter .pages:hover{
+  background: #58A7F8;
+  border: 1px solid #58A7F8;
+  color: #FFFFFF;
+}
+
+.pageFooter .pages.currentPage {
+  background: #58A7F8;
+  border: 1px solid #58A7F8;
+  color: #FFFFFF;
+}
+
+
+.pageFooter .firstPage {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.pageFooter .firstPage:hover,
+.pageFooter .lastPage:hover,
+.pageFooter .prevPage:hover,
+.pageFooter .nextPage:hover,
+.pageFooter .firstPage:active,
+.pageFooter .lastPage:active,
+.pageFooter .prevPage:active,
+.pageFooter .nextPage:active{
+  text-decoration: underline;
+}
+
+.pageFooter .prevPage {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.pageFooter .nextPage {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.pageFooter .lastPage {
+  margin-left: 30px;
+  margin-right: 0;
+}

@@ -1,0 +1,43 @@
+@import '../../../assets/css/custom.scss';
+.inputBox {
+    height: 80px;
+    position: relative;
+    .tip {
+        height: 30px;
+        line-height: 30px;
+        @extend %font-F75A5A-14px;
+    }
+    input {
+        @extend %font-39413C-16px;
+        width: 358px;
+        height: 48px;
+        display: block;
+        background: #FFFFFF;
+        border: 1px solid #EBEBEB;
+        border-radius: 2px;
+        text-indent: 16px;
+        &:focus{
+            outline: 1px solid $green;
+        }
+    }
+    .icon-user,
+    .icon-password,
+    .icon-phone {
+        @extend %iconBackground;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+    }
+
+    .icon-user{
+        background-position: -14px -18px;
+    }
+    .icon-password{
+        background-position: -14px -38px;
+    }
+    .icon-phone{
+        background-position: -14px -58px;
+    }
+}

@@ -1,0 +1,39 @@
+
+
+.selectInput{
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.selectInput .selectLabel {
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #393D3B;
+  margin-right: 6px;
+  line-height: 32px;
+  height: 32px;
+  float: left;
+}
+
+.selectInput input:focus {
+  border: 1px solid #b5bdc6;
+  outline: none;
+}
+
+.selectInput .titleInput {
+  position: relative;
+  width: 178px;
+  float: left;
+  background: #FFFFFF;
+  border-radius: 2px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  text-indent: 12px;
+  color: #393d3b;
+}
+.selectInput .titleInput:hover{
+  border: 1px solid #58A7F8;
+}

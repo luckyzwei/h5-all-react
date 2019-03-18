@@ -1,0 +1,134 @@
+@import "../../assets/css/custom";
+.naviBox {
+  width: 134px;
+  height: 100%;
+  //background: #1E2220;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E9EBEE;
+  z-index: 99;
+  transition: width .4s;
+  .avatar {
+    height: 182px;
+    flex: none;
+    width: 100%;
+
+    img {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      margin: 40px 46px 7px;
+    }
+    p {
+      @extend %font-16px;
+      color: #485767;
+      text-align: center;
+    }
+  }
+}
+
+.navi {
+  flex: auto;
+  width: 100%;
+  overflow: auto;
+}
+
+.naviItem {
+  width: 134px;
+  @extend %font-14px-400;
+  color: #8D969F;
+  .naviText {
+    //padding-left: 62px;
+
+    height: 52px;
+    line-height: 52px;
+    position: relative;
+    cursor: pointer;
+    border-left: 5px solid transparent;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    .navi-icon {
+      //@extend %iconBackground;
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      left: 22px;
+      top: 12px;
+      &.icon-home {
+        background-position: -54px -18px;
+      }
+      &.icon-delivery {
+        background-position: -54px -46px;
+      }
+      &.icon-data {
+        background-position: -54px -74px;
+      }
+      &.icon-wealth {
+        background-position: -54px -103px;
+      }
+      &.icon-account {
+        background-position: -54px -131px;
+      }
+    }
+    &.active{
+      border-left: 5px solid $blue;
+      background: #EEF6FF;
+    }
+    &.active,
+    &:hover {
+      color: $blue;
+      font-weight: 500;
+      .icon-home {
+        background-position: -54px -159px;
+      }
+      .icon-delivery {
+        background-position: -54px -187px;
+      }
+      .icon-data {
+        background-position: -54px -216px;
+      }
+      .icon-wealth {
+        background-position: -54px -244px;
+      }
+      .icon-account {
+        background-position: -54px -272px;
+      }
+    }
+  }
+  .subNavi {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+    .subNaviItem {
+      height: 36px;
+      line-height: 36px;
+      cursor: pointer;
+      padding-left: 62px;
+      &.active,
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+.secondNavi .naviText{
+  &::after {
+    //@extend %iconBackground;
+    //background-position: -14px -132px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 16px;
+    right: 14px;
+    display: block;
+    content: '';
+    transform: rotate(180deg);
+    transition: all ease-in-out .2s;
+  }
+  &.expand::after{
+    transform: rotate(0deg);
+  }
+}

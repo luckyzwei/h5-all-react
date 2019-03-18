@@ -1,0 +1,148 @@
+$green:#39C272;
+$greenHover: #5DD18D;
+$lite-green:#83DFA8;
+$red: #F75A5A;
+$border-gray:#EBEBEB;
+$write:#FFFFFF;
+$blue:#58A7F8;
+$blue-lite: #D8E7F9;
+$blue-dark: #288BF2;
+$img-path: '/gpetmg';
+%font-262E29-26px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 26px;
+  color: #262E29;
+}
+
+%font-BFC0BF-26px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 26px;
+  color: #BFC0BF;
+}
+
+%font-39413C-16px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 16px;
+  color: #39413C;
+}
+
+%font-FFFFFF-16px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+%font-485767-14px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 14px;
+  color: #485767;
+}
+
+%font-AEAEAE-14px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 14px;
+  color: #AEAEAE;
+}
+
+%font-F75A5A-14px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 14px;
+  color: #F75A5A;
+}
+
+%font-393D3B-14px {
+  font-family: PingFangSC;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+%font-26px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+%font-16px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+%font-14px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 14px;
+}
+%font-14px-400{
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 14px;
+}
+%font-12px {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 12px;
+}
+%font-13px-light {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 13px;
+}
+%font-13px-Regular{
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 13px;
+}
+%font-14px-medium {
+  font-family: PingFangSC;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+%font-12px-medium {
+  font-family: PingFangSC;
+  font-weight: 500;
+  font-size: 12px;
+}
+%iconBackground {
+    background: url(#{$img-path}/images/iconography.png) no-repeat;
+    background-size: 1280px 900px;
+}
+
+%verticalCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%textHide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+%flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin multiTextHide($num) {
+    display: -webkit-box;
+    display: -moz-box;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: $num;
+    -moz-line-clamp: $num;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

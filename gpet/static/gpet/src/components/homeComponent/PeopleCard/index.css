@@ -1,0 +1,42 @@
+.peopleCardBox .item {
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleCardBox {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 200px;
+  width: 100%;
+}
+
+.peopleCardBox .item-line {
+  display: inline-block;
+  background: #D8D8D8;
+  width: 1px;
+  height: 70px;
+}
+
+.peopleCardBox .item {
+  align-items: center;
+  width: 50%;
+}
+
+.peopleCardBox .item .peopleNum .num {
+  font-family: PingFangSC-Regular;
+  font-size: 50px;
+  color: #444444;
+}
+
+.peopleCardBox .item .peopleText {
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #3F3F3F;
+}
+
+.peopleCardBox .item .peopleText span {
+  color: #999999;
+}

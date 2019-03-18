@@ -1,0 +1,711 @@
+@import './assets/css/common';
+@import './assets/css/animate';
+@import './assets/css/newIndex';
+
+.gp-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 手机号补全信息页面 begin model */
+.register-wrapper .inputBox {
+    width: 550px;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    margin: 0 auto 40px;
+    display: flex;
+    align-items: center;
+}
+
+.register-wrapper .inputBox input {
+    width: 0px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    text-indent: 50px;
+    line-height: 100px;
+    display: block;
+    flex: auto;
+    color: #333333;
+}
+
+.register-wrapper .inputBox input:disabled {
+    color: #C1C0C0;
+}
+
+.register-wrapper .inputBox .btnCode {
+    height: 52px;
+    border-left: 2px solid #DADEE2;
+    width: 230px;
+    text-align: center;
+    line-height: 52px;
+    font-family: PingFangSC-Medium;
+    font-size: 30px;
+    color: #368EFD;
+    flex: none;
+}
+
+.register-wrapper .inputBox .btnCode.disable {
+    color: #B5BDC6;
+}
+
+.register-wrapper .submitBtn {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    width: 550px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+    background: #E0DEDE;
+    border-radius: 100px;
+    color: #FFFFFF;
+}
+
+.register-wrapper .submitBtn.disable {
+    background-image: linear-gradient(-180deg, #FFC11E 0%, #FFA50D 100%);
+}
+
+/* home 首页 begin*/
+
+.homepage-wrapper {
+    width: 100%;
+    min-height: 100%;
+    background: #F7F8F9;
+    position: relative;
+    overflow: hidden;
+}
+
+.homepage-wrapper .featuresBox {
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.homepage-wrapper .featuresBox .skillCardBox,
+.homepage-wrapper .featuresBox .exclusiveCardBox {
+    padding: 0 20px;
+}
+
+.homepage-wrapper .featuresBox .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.homepage-wrapper .featuresBox .row:nth-child(1) {
+    padding-top: 10px;
+}
+
+.homepage-wrapper .featuresBox .row .column {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.homepage-wrapper .featuresBox .row .column .home_icon{
+    @extend %bg_icon_home;
+    width: 74px;
+    height: 74px;
+    margin-bottom: 11px;
+}
+.homepage-wrapper .featuresBox .row .column img {
+    width: 74px;
+    height: 74px;
+    margin-bottom: 10px;
+}
+
+.homepage-wrapper .featuresBox .row .column span {
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #333333;
+}
+
+.homepage-wrapper .featuresBox .exclusiveCardBox .row {
+    padding-bottom: 41px;
+}
+
+.homepage-wrapper .featuresBox .exclusiveCardBox .row .column img {
+    margin-bottom: 11px;
+}
+
+.homepage-wrapper .cardTitle {
+    text-align: left;
+    padding: 30px;
+
+}
+
+.homepage-wrapper .cardTitle .title-line {
+    width: 6px;
+    height: 26px;
+    display: inline-block;
+    background-image: linear-gradient(-137deg, #66C1FF 0%, #2F8BFF 100%);
+    border-radius: 5px;
+}
+
+.homepage-wrapper .cardTitle .title-text {
+    font-family: PingFangSC-Medium;
+    font-size: 28px;
+    color: #333333;
+    margin-left: 14px;
+}
+
+/*跑马灯 .infoBox*/
+.homepage-wrapper .infoBox {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background: #DAF0FF;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #333333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 820;
+}
+
+.homepage-wrapper .infoBox .info-icon {
+    width: 30px;
+    height: 30px;
+    @extend %bg_icon_home;
+    background-position: -29px -207px;
+    margin: 0 16px 0 34px;
+    flex: none;
+}
+
+.homepage-wrapper .infoBox .info {
+    color: #333333;
+    margin-right: 10px;
+    font-family: PingFangSC-Medium;
+    flex: none;
+}
+
+.homepage-wrapper .infoBox .msg {
+    flex: none;
+    white-space: nowrap;
+    margin-right: 200px;
+}
+
+.homepage-wrapper .infoBox .view {
+    color: #55A0FF;
+    text-decoration: underline;
+    margin: 0 30px;
+    flex: none;
+}
+
+.homepage-wrapper .infoBox .outer {
+    flex: auto;
+    overflow: hidden;
+}
+
+.homepage-wrapper .infoBox .textSlide {
+    display: flex;
+    animation: slideInfinite 20s infinite linear;
+}
+
+/*跑马灯 .infoBox end*/
+.homepage-wrapper .footer {
+    display: flex;
+    justify-content: center;
+}
+
+.homepage-wrapper .strategy {
+    flex: none;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #666666;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.homepage-wrapper .strategy:first-child {
+    margin-right: 110px;
+}
+/*home end*/
+
+/* 引导页 */
+
+.homepage-wrapper .firstLogin {
+    overflow: hidden;
+}
+
+.homepage-wrapper .firstLogin .info {
+    height: 70px;
+    width: 100%;
+}
+
+.homepage-wrapper .firstLogin .step {
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-wrapper .firstLogin .step1 {
+    background: url('/images/bj/pic_newuser1.png') no-repeat;
+    background-size: 750px;
+     //margin-top: 70px;
+}
+
+.homepage-wrapper .firstLogin .step2 {
+    background: url('/images/bj/pic_newuser2.png') no-repeat;
+    background-size: 750px;
+}
+
+.homepage-wrapper .firstLogin .step3 {
+    background: url('/images/bj/pic_newuser3.png') no-repeat;
+    background-size: 750px;
+}
+
+.homepage-wrapper .firstLogin .step4 {
+    background: url('/images/bj/pic_newuser4.png') no-repeat;
+    background-size: 750px;
+}
+.homepage-wrapper .firstLogin .confirm-step{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+.homepage-wrapper .firstLogin .confirmBtn {
+    width: 250px;
+    height: 85px;
+    line-height: 85px;
+    border: 2px solid #FFFFFF;
+    border-radius: 100px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 650px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* 封号404页面 begin*/
+
+.noauth-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-1deg, #448AFF 0%, #509DFF 91%);
+}
+
+.noauth-wrapper p {
+    padding-top: 295px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.noauth-wrapper .img {
+    width: 419px;
+    height: 231px;
+    background: url('/images/icon/pic_fenghao.png') no-repeat;
+    background-size: cover;
+    margin: 30px auto;
+}
+/* 封号404页面 end*/
+
+/* 错误提示页面 begin*/
+.error-wrapper {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    background: url('/images/bj/bg.png') no-repeat;
+    background-size: cover;
+}
+.error-wrapper p {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 26vh;
+}
+
+.error-wrapper img {
+    width: 251px;
+    height: 158px;
+    display: block;
+    margin: 8px auto 0;
+}
+
+.error-wrapper .img404 {
+    width: 420px;
+    height: 230px;
+    margin: 32px auto 0;
+}
+
+.error-wrapper .refreshBtn {
+    width: 224px;
+    height: 85px;
+    line-height: 85px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #368EFD;
+    text-align: center;
+    margin: 138px auto 0;
+}
+
+/*错误页面 end*/
+
+/* 常见问题 */
+
+.question-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-wrapper .title {
+    width: 100%;
+    height: 214px;
+    background: url('/images/banner/title7.png') no-repeat;
+    background-size: cover;
+    flex: none;
+}
+
+.question-wrapper .questionList {
+    flex: auto;
+    overflow-y: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.question-wrapper .questionList .item {
+    width: 690px;
+    margin: 0 auto;
+    border-bottom: 1px solid #DADEE2;
+    overflow-y: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.question-wrapper .questionList .item .question {
+    height: 102px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question-wrapper .questionList .item .answer {
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #999999;
+    width: 100%;
+}
+
+.question-wrapper .questionList .item .answer .text {
+    font-size: 26px;
+    width: 100%;
+}
+
+.question-wrapper .questionList .item .answer img {
+    vertical-align: bottom;
+    width: 37px;
+    height: 37px;
+}
+
+.question-wrapper .buttonArea {
+    height: 140px;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-wrapper .buttonArea .clickBtn {
+    width: 368px;
+    height: 100px;
+    background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+    border-radius: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* 问题反馈 */
+
+.feedback-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.feedback-wrapper .title {
+    width: 750px;
+    height: 222px;
+    background: url('/images/banner/title8.png') no-repeat;
+    background-size: cover;
+    margin: 0 auto 46px;
+}
+.feedback-wrapper .feedback-content{
+  height: calc(100% - 268px);
+  position: relative;
+}
+.feedback-wrapper .submitBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 191px;
+}
+
+.feedback-wrapper .selectWrapper {
+    width: 634px;
+    height: 88px;
+    margin: 0 auto 30px;
+}
+
+.feedback-wrapper .selectOption {
+    width: 634px;
+    height: 86px;
+    line-height: 86px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+}
+
+.feedback-wrapper .selectWrapper input {
+    border: 1px solid #979797;
+    border-radius: 6px;
+    text-indent: 30px;
+    background: #FFFFFF;
+}
+
+.feedback-wrapper .selectWrapper textarea {
+    width: 634px;
+    height: 302px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+    padding: 22px 30px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.feedback-wrapper .feedbackBox {
+    background: #55A0FF;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    width: 552px;
+    height: 453px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.feedback-wrapper .feedbackBox .text {
+    margin-top: 141px;
+}
+
+.feedback-wrapper .feedbackBox .butt {
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px 2px rgba(0, 43, 216, 0.18);
+    border-radius: 100px;
+    width: 390px;
+    height: 90px;
+    line-height: 90px;
+    color: #368EFD;
+    margin: 66px auto 0;
+}
+
+
+
+/* 导入群 收徒  begin */
+
+/* 临时的 */
+
+.import-wrapper {
+    width: 100%;
+    height: 3291px;
+    position: relative;
+     background: url('/images/bj/import.jpg') no-repeat;
+    background-size: cover;
+}
+   
+.import-wrapper .import_qrcode{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top:16%;
+    width: 220px;
+}
+
+.import-wrapper .title {
+    background: url('/images/banner/title2.png') no-repeat;
+    background-size: cover;
+    width: 750px;
+    height: 220px;
+}
+
+.import-wrapper .importBox {
+    width: 710px;
+    box-sizing: border-box;
+    padding: 64px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.import-wrapper .importBox .step {
+    font-family: PingFangSC-Medium;
+    font-size: 46px;
+    color: #368EFD;
+    letter-spacing: 2.5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.import-wrapper .importBox .qrCode {
+    width: 230px;
+    height: 230px;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 7px;
+}
+
+.import-wrapper .importBox .text {
+    font-family: PingFangSC-Regular;
+    font-size: 32px;
+    line-height: 45px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+
+.import-wrapper .importBox .screenshot {
+    display: block;
+    width: 525px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+/* 导入群 收徒  end */
+
+
+
+/* 分享页面 begin */
+
+.share-wrapper {
+    width: 100%;
+    height: 100%;
+    background: #55A0FF;
+    position: relative;
+}
+
+.share-wrapper .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.share-wrapper .modalBox p {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.share-wrapper .fingerPrint {
+    width: 160px;
+    height: 165px;
+    background: url('/images/icon/fingerprint.png') no-repeat;
+    background-size: cover;
+    margin: 0 auto 50px;
+}
+
+.share-wrapper img {
+    height: 80vh;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.share-wrapper img.hide {
+    opacity: 0;
+    z-index: 9999;
+}
+/* 分享页面 end */
+
+/*空三角形 begin 提现／徒弟徒孙 */
+.question-wrapper .item .question .downArrow ,
+.profit-wrapper .profitList li .content .downArrow,
+.disciple-wrapper li .downArrow {
+    flex: none;
+    display :inline-block;
+    position: relative;
+    width: 40px;
+    height: 32px;
+    transition: all 0.3s ease-in-out 0s;
+    margin-right: 20px; 
+}
+.question-wrapper .item .question .downArrow:after,
+.profit-wrapper .profitList li .content .downArrow:after,
+.disciple-wrapper li .downArrow:after{
+     display: inline-block;
+    content: " ";
+    height: 20px;
+    width: 20px;
+    border-width: 0 3px 3px 0;
+    border-color: #5d5b5b;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform-origin: center;
+    transition: transform .3s;
+    position: absolute;
+    right: 10px;
+}
+.question-wrapper .item .question .downArrow.up ,
+.profit-wrapper .profitList li .content .downArrow.up,
+.disciple-wrapper li .downArrow.up {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: transform .3s;
+}
+/*空三角形 end*/
+/*实心三角 begin 群列表／@我*/
+.altme-wrapper .msgItem .right .unexpand::after,
+.group-wrapper .groupItem .cardHeader .unexpand::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #999;
+    margin-left: 10px;
+    margin-bottom: 6px;
+}
+.altme-wrapper .msgItem .right .unexpand.expand::after,
+.group-wrapper .groupItem .cardHeader .unexpand.expand::after {
+    transform: rotate(-180deg);
+}
+
+/*实心三角 end*/
+

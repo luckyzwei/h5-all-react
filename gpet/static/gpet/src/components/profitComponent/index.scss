@@ -1,0 +1,179 @@
+/* 收益明细页面 */
+
+.profit-wrapper {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.profit-wrapper .profitBox {
+    background: url('/images/bj/icongraphy_profi.png') no-repeat;
+    background-size: 846px 487px;
+    background-position:  -97px -47px;
+    width: 714px;
+    height: 406px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+}
+
+.profit-wrapper .profitBox .title {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: left;
+    padding-top: 50px;
+}
+
+.profit-wrapper .profitBox .moneyBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profit-wrapper .profitBox .moneyBox .money {
+    font-family: PingFangSC-Semibold;
+    font-size: 80px;
+    color: #FFFFFF;
+    height: 112px;
+    line-height: 112px;
+    margin-bottom: 30px;
+}
+
+.profit-wrapper .profitBox .moneyBox .withdrawBtn {
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    background: #FFFFFF;
+    border-radius: 40px;;
+    font-family: PingFangSC-Medium;
+    font-size: 32px;
+    color: #368EFD;
+    text-align: center;
+}
+
+.profit-wrapper .profitBox .detail {
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.profit-wrapper .profitBox .detail .item {
+    flex: auto;
+    width: 49.9%;
+}
+
+.profit-wrapper .profitBox .detail .item:last-child {
+    padding-left: 40px;
+}
+
+.profit-wrapper .profitBox .detail .item p:first-child {
+    opacity: 0.7;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.profit-wrapper .profitBox .detail .item p:last-child {
+    font-family: PingFangSC-Semibold;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.profit-wrapper .profitBox .detail .line {
+    width: 2px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.profit-wrapper .profitList {
+    margin-top: 20px;
+    background: #FFFFFF;
+    padding: 0 30px;
+}
+
+.profit-wrapper .profitList .title {
+    height: 102px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #444444;
+    border-bottom: 2px solid #DADEE2;
+    display: flex;
+    align-items: center;
+}
+
+.profit-wrapper .profitList .title span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url('/images/bj/icongraphy_profi.png') no-repeat;
+     background-size: 846px 487px;
+    background-position: -42px -47px;
+    margin-left: 20px;
+    margin-top: 2px;
+    vertical-align: middle;
+}
+
+.profit-wrapper .profitList ul li {
+    border-bottom: 2px solid #DADEE2;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #999999;
+}
+
+.profit-wrapper .profitList ul li:last-child {
+    border: 0 none;
+}
+
+.profit-wrapper .profitList li .content {
+    overflow: hidden;
+}
+
+.profit-wrapper .profitList li .content .substract {
+    height: 102px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profit-wrapper .profitList li .content .date,
+.profit-wrapper .profitList li .content .info span:first-child {
+    width: 460px;
+    flex: none;
+}
+
+.profit-wrapper .profitList li .content .money {
+    width: 300px;
+    color: #333333;
+}
+
+
+
+.profit-wrapper .profitList li .content .info {
+    padding-bottom: 10px;
+    display: flex;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #999999;
+}
+
+.profit-wrapper .profitList li .content .info:last-child {
+    padding-bottom: 30px;
+}
+
+.profit-wrapper + .loadingBox {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    font-size: 36px;
+    text-align: center;
+}
+

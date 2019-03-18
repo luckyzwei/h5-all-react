@@ -1,0 +1,304 @@
+
+/* 提现页面 */
+
+.withdraw-wrapper {
+    width: 100%;
+    min-height: 100%;
+    background: #55A0FF;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.withdraw-wrapper .withdrawCard {
+    width: 680px;
+    height: 913px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0 12px 30px 0 rgba(14, 31, 131, 0.38);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.withdraw-wrapper .withdrawCard h6 {
+    padding-top: 60px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #999999;
+    line-height: 48px;
+}
+
+.withdraw-wrapper .withdrawCard .money {
+    margin-top: 30px;
+    font-family: PingFangSC-Medium;
+    font-size: 80px;
+    color: #55A0FF;
+    line-height: 112px;
+}
+
+.withdraw-wrapper .withdrawCard .unpay {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #999999;
+    margin-top: 30px;
+}
+
+.withdraw-wrapper .withdrawCard .unpay span {
+    color: #333333;
+    margin-left: 12px;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox {
+    width: 600px;
+    margin: 50px auto 0;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #999999;
+    box-sizing: border-box;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox p {
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #333333;
+    line-height: 40px;
+    margin: 40px 0;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .inner {
+    flex: none;
+    width: 33.33%;
+    display: flex;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .inner:nth-child(3n) {
+    justify-content: center;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .inner:nth-child(3n+1) {
+    justify-content: flex-end;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .amountBtn {
+    flex: none;
+    width: 138px;
+    height: 78px;
+    border: 1px solid #549DFE;
+    border-radius: 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 34px;
+    color: #549DFE;
+    text-align: center;
+    line-height: 78px;
+    margin-bottom: 30px;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .amountBtn:nth-child(3n+2) {
+    align-self: flex-start;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .amountBtn.select {
+    background: #549DFE;
+    color: #FFFFFF;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .amountBtn.frist {
+    background: url('/images/newicon/fristOwn.png') no-repeat right top;
+    background-size: 86px 48px;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .amountBtn.select.frist {
+    background: url('/images/newicon/fristOwn.png') no-repeat #549DFE right top;
+    background-size: 86px 48px;
+}
+
+.withdraw-wrapper .withdrawCard .amountBox .amountBtn.disable {
+    border: 1px solid #DADADA;
+    color: #DADADA;
+}
+
+.withdraw-wrapper .withdrawCard .withdrawBtn {
+    width: 500px;
+    height: 100px;
+    line-height: 100px;
+    background-image: linear-gradient(-180deg, #FFC11E 0%, #FFA50D 100%);
+    border-radius: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    margin: 30px auto 0;
+}
+
+.withdraw-wrapper .withdrawCard .withdrawBtn.disable {
+    background: #DADADA;
+}
+
+.withdraw-wrapper .notice {
+    width: 656px;
+    margin: 94px auto 0;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+}
+
+.withdraw-wrapper .notice h6 {
+    font-family: PingFangSC-Medium;
+    font-size: 28px;
+}
+
+.withdraw-wrapper .notice p {
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+/* 身份验证 */
+
+.withdraw-wrapper .certificate {
+    width: 552px;
+    height: 606px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 96px;
+    box-sizing: border-box;
+}
+
+.withdraw-wrapper .certificate input {
+    width: 330px;
+    height: 98px;
+    line-height: 98px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 100px;
+    padding: 0 60px;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+}
+
+.withdraw-wrapper .certificate .errorTip {
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #F75A5A;
+    text-align: left;
+    text-indent: 118px;
+    margin: 4px 0;
+    line-height: 33px;
+    height: 33px;
+}
+
+.withdraw-wrapper .certificate .confirmBtn {
+    margin: 15px auto 0;
+    width: 450px;
+    height: 98px;
+    line-height: 98px;
+    background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+    border-radius: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.withdraw-wrapper .certificate .closeBtn {
+    right: -62px;
+    top: -52px;
+}
+
+.withdraw-wrapper .certificate .noticeText {
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #333333;
+    text-align: center;
+    margin-top: 34px;
+}
+
+/* 提款结果 */
+
+.withdraw-wrapper .resultBox {
+    width: 580px;
+    height: 808px;
+    background: url('/images/bj/withdraw.png') no-repeat;
+    background-size: cover;
+}
+
+.withdraw-wrapper .resultBox.success {
+    background: url('/images/bj/withdraw.png') no-repeat;
+    background-size: cover;
+    height: 771px;
+}
+
+.withdraw-wrapper .resultBox.fail {
+    height: 657px;
+    background: url('/images/bj/withdraw_fail.png') no-repeat;
+    background-size: cover;
+}
+
+.withdraw-wrapper .resultBox.success .text,
+.withdraw-wrapper .resultBox.fail .text {
+    width: 521px;
+    margin: 0px auto;
+    text-align: center;
+}
+.withdraw-wrapper .resultBox.success .text{
+    margin-top: 452px;
+}
+.withdraw-wrapper .resultBox.fail .text{
+    margin-top: 232px;
+}
+
+.withdraw-wrapper .resultBox .text h6 {
+    font-family: PingFangSC-Medium;
+    font-size: 42px;
+    color: #FFFFFF;
+    line-height: 48px;
+    margin-top: 42px;
+}
+
+.withdraw-wrapper .resultBox .text p {
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #FFFFFF;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.withdraw-wrapper .resultBox.fail .text p {
+    line-height: 52px;
+    margin-top: 367px;
+}
+
+.withdraw-wrapper .resultBox .text p b {
+    font-size: 28px;
+    color: rgb(247, 230, 24)
+}
+
+.withdraw-wrapper .resultBox .butt {
+    margin: 0 auto;
+    width: 390px;
+    height: 90px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px 2px rgba(0, 43, 216, 0.18);
+    border-radius: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #368EFD;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 90px;
+    margin-top: 46px;
+}
+
+.withdraw-wrapper .resultBox .confirmBtn {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+

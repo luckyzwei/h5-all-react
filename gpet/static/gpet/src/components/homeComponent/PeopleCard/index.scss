@@ -1,0 +1,35 @@
+@import '../../../assets/css/public.scss';
+.peopleCardBox {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 200px;
+  width: 100%;
+  .item-line {
+      display: inline-block;
+      background: #D8D8D8;
+      @include widthHight(1, 70);
+}
+  .item {
+    @extend %flexcolumn;
+    align-items: center;
+    width: 50%;
+    .peopleNum {
+      .num {
+        font-family: PingFangSC-Regular;
+        font-size: 50px;      
+        color: #444444;
+      }
+    }
+    .peopleText {
+      font-family: PingFangSC-Regular;
+       font-size: 28px;
+      color: #3F3F3F;
+      span{
+        color: #999999;
+      }
+    }
+  }
+}

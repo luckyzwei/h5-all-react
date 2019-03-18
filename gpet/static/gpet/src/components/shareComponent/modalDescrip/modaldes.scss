@@ -1,0 +1,78 @@
+/* 群收益说明 modal*/
+.modalWrapper .descripModal {
+    width: 480px;
+    padding: 0 36px;
+}
+
+.modalWrapper .descripModal .modalTitle {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #333333;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+.modalWrapper .descripModal .content {
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #333333;
+    text-align: left;
+
+}
+
+.modalWrapper .descripModal .content p {
+    margin-bottom: 30px;
+}
+
+.modalWrapper .descripModal .content p:last-child {
+    margin-bottom: 50px;
+}
+/*奖励规则 begin*/
+.modalWrapper.rewardRule .descripModal{
+    width: 560px;
+}
+.rewardRule .content .content-title{
+    font-size: 42px;
+    color: #368DFC;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.rewardRule .content .content-title:first-child{
+    margin-top: 40px;
+}
+.rewardRule .content .content-title span.title-line{
+    display: inline-block;
+    width: 30px;
+    height: 8px;
+    background: #368DFC;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+.rewardRule .content p {
+    display: flex;
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #333333;
+    letter-spacing: 1.4px;
+    margin-bottom: 40px;
+}
+
+.rewardRule .content p > span:first-child {
+    width: 34px;
+    flex: none;
+}
+
+.rewardRule .content p > span:last-child {
+    flex: auto;
+}
+
+.rewardRule .content p .num {
+    font-family: PingFangSC-Regular;
+    font-size: 34px;
+    color: #FC5A46;
+    line-height: 40px;
+}
+/*奖励规则 end*/

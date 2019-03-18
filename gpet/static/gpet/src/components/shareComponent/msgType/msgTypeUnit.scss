@@ -1,0 +1,151 @@
+
+.msgtype-content-info {
+  .taskTitle {
+    img{
+      width: 650px;
+      height: 103px;
+    }
+  }
+  .previewBox {
+    padding: 30px;
+    background: #F3F3F3;
+    .bubble {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 75px;
+      height: 75px;
+      margin-right: 20px;
+      flex: none;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .bubbleContent {
+      .nickName {
+        font-family: PingFangSC-Regular;
+        font-size: 22px;
+        color: #8C949D;
+        margin-bottom: 10px;
+      }
+      .bubbleBox {
+        background: #FFFFFF;
+        border-radius: 4px;
+        position: relative;
+      }
+      .bubbleBox:after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        transform: rotate(45deg);
+        position: absolute;
+        left: -8px;
+        top: 20px;
+      }
+    }
+
+    /* 文字 */
+
+    .textBox {
+      padding: 15px;
+      font-family: PingFangSC-Regular;
+      font-size: 28px;
+      color: #344658;
+      letter-spacing: 0;
+      word-break: break-all;
+    }
+    /* 链接 */
+    .linkBox {
+      width: 406px;
+      height: 148px;
+      padding: 15px;
+      box-sizing: border-box;
+      .linkTitle {
+        font-family: PingFangSC-Regular;
+        font-size: 28px;
+        color: #344658;
+        line-height: 40px;
+        margin-bottom: 8px;
+      }
+      .linkContent {
+        font-family: PingFangSC-Regular;
+        font-size: 24px;
+        color: #999999;
+        width: 290px;
+        line-height: 33px;
+        margin-right: 8px;
+      }
+      .linkPic {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    /* 小程序 */
+    .wxappBox {
+      width: 402px;
+      height: 434px;
+      box-sizing: border-box;
+      .wxappTitle {
+        font-family: PingFangSC-Regular;
+        font-size: 20px;
+        color: #999999;
+        padding: 15px 15px 8px;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+          transform: translateY(5px);
+          border-radius: 50%;
+        }
+      }
+      .wxContent {
+        font-family: PingFangSC-Regular;
+        font-size: 28px;
+        color: #344658;
+        padding: 0 15px;
+        line-height: 40px;
+        margin-bottom: 8px;
+      }
+      .wxImg {
+        width: 368px;
+        height: 276px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 16px;
+      }
+      .wxappFooter {
+        border-top: 1px solid #EBEBEB;
+        padding-top: 6px;
+        font-family: PingFangSC-Regular;
+        font-size: 20px;
+        color: #999999;
+        line-height: 28px;
+        padding-left: 22px;
+      }
+      .wxappLogo {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+    }
+
+    /* 图片 */
+    .picBox {
+      width: 262px;
+      height: 270px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+  }
+}

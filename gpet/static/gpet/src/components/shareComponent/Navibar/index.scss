@@ -1,0 +1,48 @@
+/* 导航条 */
+.new-ym-navibar {
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 888;
+}
+.new-ym-navibar .navibar{
+    height: 107px;
+    border-bottom: 1px solid #DADEE2;
+    position: relative;
+    background: #FFFFFF;
+    z-index: 200;
+}
+
+.new-ym-navibar .navibar .navi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.new-ym-navibar .navibar .navi .item {
+    height: 100%;
+    line-height: 108px;
+    width: 0;
+    flex: auto;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #999999;
+}
+
+.new-ym-navibar .navibar .navi .item.active{
+    .text{
+        color: #333333;
+    }
+}
+
+.new-ym-navibar .navibar .bar{
+    width: 170px;
+    background: #55A0FF;
+    height: 6px;
+    position: absolute;
+    bottom: 0px;
+    transition: all ease-in-out .3s;
+}

@@ -1,0 +1,424 @@
+@import "./custom.scss";
+.review-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.review-container .preview {
+    position: fixed;
+    left: 0;
+    top: 0;
+    -webkit-box-shadow: 0 6px 12px 0 #DEDEDE, 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px 0 #DEDEDE, 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    .text {
+        font-family: PingFangSC;
+        font-weight: 400;
+        font-size: 14px;
+        width: 180px;
+        padding: 14px;
+        background: #FFFFFF;
+        color: #393D3B;
+        text-align:left;
+    }
+}
+/*search title begin*/
+.review-container .searchBar {
+    flex: none;
+    min-width: 1080px;
+}
+
+.review-container .searchBar::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.review-container .amountRange .selectInput:first-child{
+    margin-right: 0;
+}
+.review-container .amountRange .line {
+    float: left;
+    width: 12px;
+    height: 2px;
+    background: #b5bdc6;
+    margin: 18px 6px;
+}
+
+.review-container .btnArea {
+    float: left;
+    margin-bottom: 16px;
+}
+
+.review-container .searchBtn {
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    background: #58A7F8;
+    cursor: pointer;
+    text-align: center;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.review-container .searchBtn:hover {
+    background: #2885fb;
+}
+/*search title end*/
+/*table title begin*/
+.review-container .tableArea .operateArea {
+    height: 60px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #B5BDC6;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review-container .tableArea .operateArea .acceptBtn,
+.review-container .tableArea .operateArea .exportBtn,
+.review-container .tableArea .operateArea .rejectBtn {
+    width: 98px;
+    height: 30px;
+    line-height:28px;
+    border: 1px solid #58A7F8;
+    color: #58A7F8;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    margin-left: 30px;
+}
+.review-container .tableArea .operateArea .rejectBtn{
+    border: 1px solid #F75A5A;
+    color: #F75A5A;
+}
+.review-container .tableArea .operateArea .acceptBtn:hover,
+.review-container .tableArea .operateArea .exportBtn:hover{
+    background: #58A7F8;
+    color: #FFFFFF;
+}
+.review-container .tableArea .operateArea .rejectBtn:hover{
+    background: #F75A5A;
+    color: #FFFFFF;
+}
+.review-container .tableArea .operateArea .changeSize,
+.review-container .tableArea .operateArea .totalRecords {
+    float: left;
+}
+.review-container .tableArea .operateArea .changeSize{
+    margin-right: 30px;
+}
+.review-container .tableArea .operateArea .changeSize span {
+    cursor: pointer;
+}
+.review-container .tableArea .operateArea .changeSize span:hover,
+.review-container .tableArea .operateArea .changeSize .checked {
+    color: #58A7F8;
+}
+/*table title end*/
+
+.review-container .tableArea .operateItem span {
+    display: inline-block;
+    padding: 2px 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #58A7F8;
+    color: #58A7F8
+}
+
+.review-container .tableArea .operateItem .rejectBtn {
+    border: 1px solid #F75A5A;
+    color: #F75A5A;
+}
+
+.review-container .tableArea .operateItem .acceptBtn:hover {
+    color: #FFFFFF;
+    background: #58A7F8;
+}
+
+.review-container .tableArea .operateItem .rejectBtn:hover {
+    color: #FFFFFF;
+    background: #F75A5A;
+}
+
+.review-container .dateRangeBox {
+    position: absolute;
+    width: 560px;
+    top: -2px;
+    left: -24px;
+    height: 350px;
+    background: #ffffff;
+    transform: scale(.8);
+    z-index: 999;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+.review-container .dateRangeBox .checkBtn {
+    border: 1px solid #58A7F8;
+    line-height: 25px;
+    color: #58A7F8;
+    width: 80px;
+    margin-right: 98px;
+    text-align: center;
+    border-radius: 2px;
+    float: right;
+    font-size: 12px;
+    height: 25px;
+    outline: none
+}
+
+.review-container .dateRangeBox .checkBtn:hover {
+    background: #288bf2;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: 1px solid #288bf2;
+}
+
+.review-container .arrowBox{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.review-container .icon-arrow {
+    width: 20px;
+    height: 10px;
+    display: block;
+    background: url(#{$img-path}/images/icon/arrow_icon.png) no-repeat;
+    background-size: 20px 20px;
+}
+
+.review-container .icon-arrow.up {
+    background-position: left top;
+}
+
+.review-container .icon-arrow.down {
+    background-position: left bottom;
+}
+
+.review-container .icon-arrow.up.hover {
+    background: url(#{$img-path}/images/icon/arrow_up.png) no-repeat;
+    background-size: 20px 20px;
+    background-position: left top;
+}
+
+.review-container .icon-arrow.down.hover {
+    background: url(#{$img-path}/images/icon/arrow_down.png) no-repeat;
+    background-size: 20px 20px;
+    background-position: left bottom;
+}
+
+.review-container .tableArea {
+    flex: auto;
+    overflow: auto;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 4px 12px 0 hsla(0,0%,89%,.5);
+    border-radius: 4px;
+    padding: 0 30px;
+    min-width: 1060px;
+}
+
+.review-container .pageFooter .pages {
+    width: auto;
+    min-width: 26px;
+}
+
+.review-container .modalWrapper {
+    background: rgba(0, 0, 0, 0.50);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.review-container .modalWrapper .modalBox {
+    background: #FFFFFF;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.review-container .modalWrapper .modalBox .closeBtn {
+    width: 20px;
+    height: 20px;
+    background-position: -168px -217px;
+    position: absolute;
+    right: -30px;
+    top: 0;
+    cursor: pointer;
+}
+
+.review-container .reviewModal{
+    width: 350px;
+    height: 200px;
+    text-align: center;
+}
+
+.review-container .reviewModal p{
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #344658;
+    padding: 50px;
+}
+
+.review-container .modalWrapper .reviewModal .cancelBtn {
+    width: 118px;
+    height: 32px;
+    border: 1px solid #E9EBEE;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #B5BDC6;
+    line-height: 32px;
+    float: left;
+    margin-left: 40px;
+}
+
+.review-container .modalWrapper .reviewModal .cancelBtn:hover {
+    border: 1px solid #58A7F8;
+    color: #58A7F8;
+}
+
+.review-container .modalWrapper .reviewModal .confirmBtn {
+    width: 120px;
+    height: 34px;
+    background: #58A7F8;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #FFFFFF;
+    line-height: 34px;
+    float: right;
+    margin-right: 40px;
+}
+
+.review-container .modalWrapper .reviewModal .confirmBtn:hover {
+    background: #288BF2;
+}
+
+.review-container .tableArea .operateItem span {
+    display: inline-block;
+    padding: 2px 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #58A7F8;
+    color: #58A7F8
+}
+
+.review-container .tableArea .operateItem .rejectBtn {
+    border: 1px solid #F75A5A;
+    color: #F75A5A;
+}
+
+.review-container .tableArea .operateItem .acceptBtn:hover {
+    color: #FFFFFF;
+    background: #58A7F8;
+}
+
+.review-container .tableArea .operateItem .rejectBtn:hover {
+    color: #FFFFFF;
+    background: #F75A5A;
+}
+
+.review-container .contentTable table tr .questionDesc {
+  min-width: 140px;
+  position: relative;
+}
+
+.review-container .contentTable .questionDesc .detail{
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #B5BDC6;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  width: 120%;
+  font-size: 13px;
+  text-align: left;
+  z-index: 2;
+}
+
+.review-container .contentTable .questionDesc:hover .detail{
+  display: block;
+}
+/*table css begin*/
+
+.contentTable {
+    display: flex;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.contentTable table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-top: 1px solid #E9EBEE;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #393d3b;
+}
+.contentTable table tr {
+    border-bottom: 1px solid #E9EBEE;
+    cursor: pointer;
+}
+.contentTable table tbody tr:hover {
+    background: #F8F8F9;
+}
+.contentTable table tr td {
+    height: 48px;
+    vertical-align: middle;
+}
+.contentTable table tr td {
+  max-width: 100px;
+  min-width: 120px;
+}
+.contentTable table tr td:nth-child(1) {
+  max-width: 80px;
+  min-width: 80px;
+}
+.contentTable table tr td:last-child {
+  min-width: 160px;
+}
+.contentTable table thead tr td {
+    font-family: PingFangSC-Medium;
+    color: #393d3b;
+}
+.contentTable table tbody tr:hover .checkBox {
+    display: block;
+}
+.contentTable table thead td .number .checkBox {
+    display: block;
+}
+.contentTable table td .number {
+    display: inline-block;
+    position: relative;
+    padding-left: 26px;
+    width: 74px;
+}
+.contentTable table td .number .checkBox {
+    width: 20px;
+    height: 20px;
+    background-position: -130px -193px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    display: none;
+}
+.contentTable table td .number .checked {
+    background-position: -150px -193px;
+    display: block;
+}
+
+/*table css end*/

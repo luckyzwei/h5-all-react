@@ -1,0 +1,1108 @@
+@import "./public.scss";
+
+.new-containter {
+  width: 100%;
+  min-height: 100%;
+  background: url('/images/bj/bg.png') no-repeat;
+  background-size: cover;
+}
+
+.goHome {
+  @include widthHight(86, 86);
+  @extend %bg_icon_home;
+  background-position: -485px -120px;
+  position: fixed;
+  left: 30px;
+  bottom: 150px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+/* error begin  没有群主群，没有人@等*/
+
+.sh-shareView {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.sh-shareView .shareView-img img {
+  @include widthHight(251, 158);
+}
+
+.sh-shareView .shareView-info {
+  font-family: PingFangSC-Medium;
+  font-size: 34px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.sh-shareView .shareView-retry {
+  width: 580px;
+  height: 100px;
+  line-height: 100px;
+  color: #FFFFFF;
+  font-size: 34px;
+  background: #288BF2;
+  border-radius: 6px;
+}
+
+.sh-shareView .shareView-type-btnBox {
+  @include btnStyle(360, 100);
+  display: inline-block;
+  margin-top: 143px;
+}
+
+/* error end  */
+.button-view {
+  .buttonNoSelect {
+    @include widthHight(368, 100);
+    line-height: 100px;
+    text-align: center;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF;
+    background: #DADADA;
+    border-radius: 100px;
+  }
+
+  .buttonSelected {
+    background-image: linear-gradient(-180deg, #FFC11E 0%, #FFA50D 100%);
+  }
+}
+
+/*textarea begin*/
+.cm-textarea {
+  position: relative;
+  @include widthHight(710, 376);
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  .textarea-placeholder {
+    position: relative;
+
+    .fakePlaceholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 30px;
+      background-color: #fff;
+      @include widthHight(710 - 60, 265);
+      color: $color999;
+      @extend %font-30-Regular;
+    }
+  }
+
+  textarea {
+    display: block;
+    @include widthHight(710 - 60, 265);
+    overflow: auto;
+    margin: 30px;
+    margin-bottom: 0;
+    @extend %font-30-Regular;
+    word-break: break-all;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    resize: none;
+
+    &.data-edits {
+      background-color: #fff;
+    }
+
+  }
+
+  .wordlimit {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    @extend %font-30-Regular;
+    color: $color999;
+  }
+}
+
+/*新建群发 begin*/
+.createMsg-wrapper {
+  padding: 20px;
+
+  .cm-changeBox {
+    @extend %font-30-Regular;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 650px;
+    @extend %flexBetween;
+    padding: 49px 30px;
+    margin: 10px 0;
+    color: #999;
+    cursor: pointer;
+
+    .left.selected {
+      color: #333333;
+    }
+
+    .right {
+      @extend %rightArrow;
+    }
+  }
+
+  .cm-btnBox {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.addMessGroup-view {
+  position: absolute;
+  top: 19%;
+  background: #F7F8F9;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px 0;
+
+  .groupItemList {
+    height: 67%;
+    overflow: auto;
+  }
+
+  .groupItem {
+    @include widthHight(710, 160);
+    margin: 0 auto 20px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    .bar {
+      background: #B5BDC6;
+      border-radius: 10px 0 0 10px;
+      flex: none;
+      width: 10px;
+      height: 100%;
+    }
+
+    .groupInfo {
+      flex: auto;
+      margin-left: 40px;
+      font-family: PingFangSC-Regular;
+
+    }
+
+    .groupName {
+      font-size: 30px;
+      color: #333333;
+      margin-bottom: 8px;
+      @extend %textHide;
+    }
+
+    .time {
+      font-size: 28px;
+      color: #8C949D;
+    }
+
+  }
+
+  .selectBox {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 160px;
+    width: 100%;
+    display: flex;
+
+    .left {
+      flex: auto;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px 0 30px;
+
+      .checkAll {
+        display: flex;
+        align-items: center;
+        @extend %font-30-333-Regular;
+        height: 100%;
+      }
+
+      .checkIcon {
+        margin-right: 18px !important;
+      }
+
+    }
+
+    .right {
+      flex: none;
+      @include widthHight(224, 100);
+      line-height: 100px;
+      font-family: PingFangSC-Medium;
+      font-size: 34px;
+      color: #FFFFFF;
+      background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+      border-radius: 100px;
+      text-align: center;
+      margin-top: 30px;
+      margin-right: 20px;
+    }
+
+  }
+
+  .groupItem.checked .bar {
+    background: #4F9CFF;
+  }
+
+  .groupItem .checkIcon, .selectBox .left .checkIcon {
+    width: 40px;
+    height: 40px;
+    background: url('/images/bj/icongraphy_profi.png') no-repeat;
+    background-size: 846px 487px;
+    background-position: -42px -167px;
+    margin-right: 40px;
+  }
+
+  .groupItem.checked .checkIcon, .selectBox .left .checkIcon.checked {
+    background-position: -42px -87px;
+  }
+}
+
+/*新建群发 end*/
+
+/*群发消息 begin*/
+/*list begin*/
+.new-messMsgList {
+  height: 100%;
+  background: #F7F8F9;
+
+  .header {
+    .title {
+      @extend %headertitle;
+      background: url('/images/banner/title_qunfa.png') no-repeat;
+      background-size: 750px 206px;
+    }
+  }
+
+  .messList {
+    background: #F7F8F9;
+    box-sizing: border-box;
+    height: calc(100% - 317px);
+    padding: 20px;
+
+    .cardBox {
+      height: 176px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+      border-radius: 10px;
+      padding: 0 50px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+
+      .item {
+        display: flex;
+        line-height: 60px;
+        flex-direction: column;
+        justify-content: center;
+
+        &:first-child {
+          float: left;
+          width: 70%;
+        }
+
+        &:last-child {
+          width: 30%;
+          float: right;
+          align-items: flex-end;
+        }
+
+        .createDate {
+          @extend %font-30-333-Regular;
+        }
+
+        .num {
+          @extend %font-30-Regular;
+          color: #999;
+          margin-right: 20px;
+          display: inline-block;
+          min-width: 72px;
+        }
+
+        .msgtype {
+          font-family: PingFangSC-Regular;
+          font-size: 28px;
+          color: #FFFFFF;
+          border-radius: 5px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          padding: 0px 7px;
+        }
+
+        .msgWait {
+          background: #CDCDCD;
+        }
+
+        .msgAlready {
+          background: #55A0FF;
+        }
+
+        .jumpArrow {
+          @extend %rightArrow;
+        }
+
+        .withdrawBtn {
+          border: 1px solid #55A0FF;
+          border-radius: 100px;
+          @include widthHight(116, 56);
+          line-height: 56px;
+          font-family: PingFangSC-Regular;
+          font-size: 28px;
+          color: #55A0FF;
+          text-align: center;
+          margin-bottom: -20px;
+          margin-top: 20px;
+        }
+
+        .clickNum {
+          @extend %font-30-Regular;
+          color: #55A0FF;
+          height: 67px;
+          line-height: 80px;
+        }
+      }
+    }
+
+  }
+}
+
+/*content begin*/
+.new-messMsgContent {
+  background: #F7F8F9;
+  padding: 20px;
+  padding-bottom: 60px;
+
+  & > div {
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    border-radius: 10px;
+    padding: 0 30px 30px;
+  }
+
+  .messContent {
+    margin-bottom: 20px;
+
+    .title {
+      @extend %font-30-333-Regular;
+      border-bottom: 1px solid #DADEE2;
+      padding: 36px 0;
+    }
+
+    .content {
+      .content-title {
+        @extend %font-30-333-Regular;
+        padding: 36px 0;
+      }
+    }
+  }
+
+  .messRange {
+    padding: 0 20px;
+
+    .title {
+      @extend %flexBetween;
+      @extend %font-30-333-Regular;
+      padding: 36px 0;
+    }
+
+    ul li {
+      font-family: PingFangSC-Regular;
+      font-size: 28px;
+      color: #999999;
+      border-top: 1px solid #DADEE2;
+      padding: 30px 0;
+      @extend %flexBetween;
+    }
+  }
+}
+
+/*群发消息 end*/
+/*为空 没有权限 只有群主有此功能 begin*/
+.empty-type-view {
+  @extend %background;
+
+  .shareView-type-img img {
+    @include widthHight(460, 375);
+  }
+
+  .shareView-type-info {
+    margin-top: 52px;
+    margin-bottom: 44px;
+
+    p {
+      font-family: PingFangSC-Medium;
+      font-size: 34px;
+      color: #FFFFFF;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  .shareView-type-btnBox {
+    @include btnStyle(360, 100);
+    display: inline-block;
+  }
+
+}
+
+/*为空 没有权限 只有群主有此功能 end*/
+/*欢迎语 begin*/
+.new-welcomeView {
+  height: 100%;
+
+  .header {
+    .title {
+      @extend %headertitle;
+      background: url("/images/banner/title_hi.png") no-repeat;
+      background-size: 750px 206px;
+    }
+  }
+
+  .welcomeList {
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 206px);
+    overflow: auto;
+    @extend %bgColor-F7F8F9;
+
+    .listItem {
+      @include widthHight(710, 465);
+      background: #fff;
+      margin-bottom: 20px;
+
+      .cm-textarea {
+        height: 250px;
+
+        textarea {
+          height: 200px;
+        }
+      }
+
+      .groupname {
+        @extend %font-30-333-Regular;
+        padding: 30px;
+        border-bottom: 1px solid #DADEE2;
+        @extend %textHide;
+      }
+    }
+
+    .welcomeSave {
+      margin: 0 30px;
+      @extend %flexBetween;
+
+      .btnSave {
+        @include btnSaveStyle(166, 80)
+      }
+
+      .clearbtn {
+        background: none;
+        color: #509DFF;
+      }
+
+      .wordlimit {
+        @extend %font-30-Regular;
+        color: $color999;
+      }
+    }
+  }
+
+}
+
+/*欢迎语 end*/
+/*有人@我 begin*/
+.altme-containter {
+  height: 100%;
+
+  .header {
+    position: relative;
+    z-index: 999;
+
+    .title {
+      background: url("/images/banner/title11.png") no-repeat;
+      background-size: cover;
+      @extend %headertitle;
+    }
+
+    .title-prompt {
+      @extend %titlePrompt;
+    }
+  }
+
+
+}
+
+/*了解详情*/
+.openAnt {
+  width: 552px;
+  // height: 432px;
+  .title {
+    padding: 70px 90px;
+    text-align: left;
+
+    .iconBox {
+      padding-top: 60px;
+
+      .selectedIcon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url("/images/newicon/ic_@me_open.png") no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        margin-top: -6px;
+        margin-right: 12px;
+      }
+
+      .unselected {
+        background: url("/images/newicon/ic_@me_close.png") no-repeat;
+        background-size: cover;
+      }
+
+    }
+  }
+
+  .btnBox {
+    border-top: 1px solid #DADEE2;
+    text-align: center;
+    padding: 30px 0;
+
+    .confrimBtn {
+      font-family: PingFangSC-Medium;
+      font-size: 32px;
+      color: #4F9CFF;
+    }
+  }
+}
+
+.altme-wrapper {
+  height: 100%;
+
+  .altmeList {
+    box-sizing: border-box;
+    margin: 20px;
+    @extend %bgColor-F7F8F9;
+    // height: calc(100% - 206px);
+    overflow: auto;
+  }
+
+  .msgItemOuter {
+    margin-bottom: 20px;
+  }
+
+  .msgItem {
+    box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    width: 710px;
+    margin: 0 auto;
+
+    .left, .right {
+      display: flex;
+      justify-content: flex-start;
+      font-family: PingFangSC-Regular;
+      font-size: 28px;
+      color: #999999;
+    }
+
+    .left {
+      width: 76%;
+      margin-left: 40px;
+      flex-direction: column;
+
+      .groupName {
+        margin-bottom: 14px;
+        @extend %textHide;
+      }
+    }
+
+    .right {
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+
+      .unexpand::after {
+        margin-bottom: 4px !important;
+      }
+    }
+
+    .msgInfo {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border-radius: 10px;
+      cursor: pointer;
+
+      .bar {
+        width: 10px;
+        flex: none;
+        height: 100%;
+        background: #4F9CFF;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .info {
+        .name {
+          font-family: PingFangSC-Regular;
+          font-size: 26px;
+          color: #8C949D;
+        }
+
+        .msg {
+          font-family: PingFangSC-Regular;
+          font-size: 28px;
+          color: #160000;
+          max-width: 500px;
+
+          span {
+            color: #F75A5A;
+          }
+        }
+
+      }
+    }
+
+    .msgInfo.read .bar {
+      background: #D3D3D3;
+    }
+
+    .msgInfo.read .info .msg span {
+      color: #8C949D;
+    }
+
+  }
+
+
+}
+
+.answerList.expand {
+  transition: top ease-in-out .3s;
+  width: 100%;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  position: relative;
+
+  .new-verifyTipBox {
+    top: 65%;
+  }
+
+  /*回复*/
+  .answerBox {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+
+    .history {
+      flex: auto;
+      background: #F2F2F2;
+      overflow: auto;
+      position: relative;
+      padding: 40px;
+    }
+
+    .reply {
+      flex: none;
+      background: #FFFFFF;
+      box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+      border-radius: 10px;
+
+      pre {
+        text-indent: 34px;
+        border: 2px solid #DADEE2;
+        font-family: PingFangSC-Regular;
+        font-size: 28px;
+        color: #333333;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-all;
+        max-height: 160px;
+        overflow: auto;
+        padding: 20px 0;
+        width: 646px;
+        margin: 40px 40px 0 40px;
+      }
+
+      .sendBtn {
+        margin: 21px 40px;
+        float: right;
+
+        @include btnSaveStyle(166, 80);
+      }
+    }
+  }
+}
+
+/* 消息气泡 */
+
+/* 好友的普通文本消息 */
+
+.friendMsgBubble,
+.selfMsgBubble {
+  padding: 15px 0;
+  display: flex;
+}
+
+.friendMsgBubble .avatarBox,
+.selfMsgBubble .avatarBox {
+  flex: none;
+  width: 75px;
+  height: 75px;
+  margin: 0 20px 0 0;
+}
+
+.friendMsgBubble .avatarBox img,
+.selfMsgBubble .avatarBox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.friendMsgBubble .friendMsgBox,
+.selfMsgBubble .selfMsgBox {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  min-width: 40px;
+  max-width: 480px;
+}
+
+.friendMsgBubble .friendMsgBox .nickName,
+.selfMsgBubble .selfMsgBox .nickName {
+  font-family: PingFangSC-Regular;
+  font-size: 22px;
+  color: #8C949D;
+  margin-bottom: 10px;
+}
+
+.friendMsgBubble .friendMsgBox .msgBox,
+.selfMsgBubble .selfMsgBox .msgBox {
+  padding: 13px 16px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #344658;
+  line-height: 40px;
+  position: relative;
+}
+
+.friendMsgBubble .friendMsgBox .msgBox::after,
+.selfMsgBubble .selfMsgBox .msgBox::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  position: absolute;
+  transform: rotate(-45deg) skew(14deg, 14deg);
+  top: 7px;
+  border-radius: 2px;
+}
+
+.friendMsgBubble .friendMsgBox .msgBox::after {
+  left: -8px;
+}
+
+.friendMsgBubble .friendMsgBox .msgBox pre,
+.selfMsgBubble .selfMsgBox .msgBox pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #333333;
+}
+
+/* 自己的普通文本消息 */
+
+.selfMsgBubble {
+  flex-direction: row-reverse;
+}
+
+.selfMsgBubble .avatarBox {
+  margin: 0 0 0 20px;
+}
+
+.selfMsgBubble .selfMsgBox .nickName {
+  text-align: right;
+}
+
+.selfMsgBubble .selfMsgBox .msgBox::after {
+  right: -8px;
+}
+
+/*******用户图片消息*******/
+
+.friendMsgBubble .imgMsgBox,
+.selfMsgBubble .imgMsgBox {
+  border-radius: 4px;
+  position: relative;
+}
+
+.friendMsgBubble .imgMsgBox img,
+.selfMsgBubble .imgMsgBox img {
+  height: 126px;
+  border-radius: 5px;
+}
+
+.friendMsgBubble .imgMsgBox .loadingBox,
+.selfMsgBubble .imgMsgBox .loadingBox {
+  height: 82px;
+  width: 120px;
+  margin: 0;
+  text-align: center;
+  padding-top: 38px;
+  background: #FFFFFF;
+}
+
+.friendMsgBubble .imgMsgBox .alertBox,
+.selfMsgBubble .imgMsgBox .alertBox {
+  width: 120px;
+  height: 120px;
+  background: url('/images/icon/alert.png') no-repeat;
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+/*有人@我 end*/
+
+/*关键词 begin*/
+.keyword-containter {
+  height: 100%;
+  background: #F7F8F9;
+
+  .keywordWrapper {
+    width: 100%;
+    height: calc(100% - 160px);
+    position: relative;
+  }
+
+  .header {
+    position: relative;
+    background: url('/images/banner/title_key.png') no-repeat;
+    background-size: cover;
+    @extend %headertitle;
+
+    .title-prompt {
+      @extend %titlePrompt;
+      left: 52px;
+      text-decoration: none;
+    }
+  }
+
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: calc(100% - 206px);
+    overflow-y: auto;
+  }
+
+  .keyword-item {
+    width: 650px;
+    min-height: 237px;
+    background: #fff;
+    padding: 0 30px;
+    margin-bottom: 20px;
+
+    & > div {
+      @extend %flexBetween;
+    }
+
+    .title {
+      padding: 22px 0;
+      border-bottom: 1px solid #DADEE2;
+
+      .name {
+        @extend %font-30-333-Regular;
+        width: 20%;
+      }
+
+      .keyword {
+        flex: auto;
+
+        span {
+          display: inline-block;
+          background: #EBF4FF;
+          border-radius: 30px;
+          padding: 10px 20px;
+          @extend %textHide;
+          font-family: PingFangSC-Regular;
+          font-size: 28px;
+          color: #55A0FF;
+          text-align: center;
+          margin-left: 14px;
+        }
+
+      }
+
+      .jumpArrow {
+        @extend %rightArrow;
+      }
+    }
+
+    .footer {
+      @extend %flexBetween;
+      padding: 24px 0;
+
+      .info {
+        @extend %flexcolumn;
+        @extend %font-30-Regular;
+        color: #999999;
+      }
+
+      .delBtn {
+        font-family: PingFangSC-Regular;
+        font-size: 28px;
+        color: #55A0FF;
+        text-align: center;
+        border: 1px solid #55A0FF;
+        border-radius: 100px;
+        @include widthHight(115, 56);
+        line-height: 56px;
+        cursor: pointer;
+      }
+    }
+
+
+  }
+
+  .addKeyword {
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translate(-50%);
+    width: 368px;
+    height: 100px;
+    line-height: 100px;
+    background: #DADADA;
+    border-radius: 100px;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 99;
+  }
+
+  .addKeyword.active {
+    background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+  }
+
+  .keywordDetails {
+    padding: 0;
+    height: 100%;
+
+    .inputkeyWord {
+      position: relative;
+      box-sizing: border-box;
+      @include widthHight(710, 186);
+      background: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+      margin-bottom: 20px;
+      padding: 26px 30px;
+
+      input::-webkit-input-placeholder {
+        color: #999;
+      }
+
+      input {
+        @extend %font-30-333-Regular;
+        @include widthHight(200, 42);
+        padding: 9px 0;
+      }
+
+      .wordlimit {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        @extend %font-30-Regular;
+        color: $color999;
+      }
+
+      .keyword {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #EBF4FF;
+        border-radius: 30px;
+        padding: 0 20px;
+        height: 60px;
+        line-height: 60px;
+        @extend %textHide;
+        font-family: PingFangSC-Regular;
+        font-size: 28px;
+        color: #55A0FF;
+        text-align: center;
+        margin-right: 14px;
+        margin-bottom: 14px;
+        position: relative;
+
+        span {
+          display: inline-block;
+        }
+
+        .ic_key_delete {
+          @include widthHight(40, 24);
+
+          &::before, &::after {
+            content: "";
+            position: absolute;
+            height: 24px;
+            top: 18px;
+            right: 28px;
+            width: 2px;
+            background: #55A0FF;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+    }
+
+    .cm-changeBox {
+      box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    }
+
+    .cm-textarea {
+      margin: 20px 0;
+      box-shadow: 0 2px 14px 0 rgba(218, 218, 218, 0.50);
+    }
+
+    .prompt {
+      font-family: PingFangSC-Regular;
+      font-size: 28px;
+      color: #999999;
+    }
+  }
+}
+
+
+/*关键词 end*/
+
+
+

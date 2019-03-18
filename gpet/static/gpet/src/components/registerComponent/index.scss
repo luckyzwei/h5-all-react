@@ -1,0 +1,164 @@
+@import '../../assets/css/public.scss';
+/*手机号注册 begin*/
+.registerModal {
+  .register-wrapper {
+    background: #fff;
+    padding-top: 71px;
+    width: 552px;
+    height: 566px;
+    min-height: auto;
+    border-radius: 20px;
+    .inputBox {
+      width: 450px;
+      height: 84px;
+      line-height: 84px;
+      border: 1px solid #979797;
+      margin: 0 auto 50px;
+      input {
+        text-indent: 30px;
+      }
+      .btnCode {
+        width: 190px;
+        color: #55A0FF;
+      }
+      .btnCode.disable {
+        color: #B5BDC6;
+      }
+    }
+    .inputBox:nth-child(1) {
+      margin-top: 47px;
+    }
+    .protocal {
+      color: #B5BDC6;
+      margin: 21px auto 20px;
+      .checkBox {
+        border: 1px solid #B5BDC6;
+        border-radius: 5px;
+      }
+    }
+    .submitBtn {
+      width: 450px;
+      height: 98px;
+      line-height: 98px;
+    }
+    .submitBtn.disable {
+      background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+    }
+  }
+}
+/*手机号注册 end*/
+
+/*领养协议 begin*/
+.ym-protocalBox {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 670px;
+    height: 90%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.ym-protocalBox h4 {
+    font-family: PingFangSC-Semibold;
+    font-size: 34px;
+    color: #333333;
+    text-align: center;
+    margin: 30px 0;
+    line-height: 48px;
+}
+
+.ym-protocalBox .content {
+    height: calc(100% - 150px);
+    overflow: auto;
+}
+
+.ym-protocalBox div {
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #060606;
+    margin-bottom: 20px;
+}
+
+.ym-protocalBox .closeBtn {
+    right: -50px;
+    top: -52px;
+}
+
+/*领养协议 end*/
+
+
+/*新的红包领取*/
+.registerSuccess {
+  .icon-cross{
+    right: -20px;
+    top: -25px;
+  }
+  .red_bg{
+    background: url('/images/newicon/red_2.png') no-repeat;
+    width: 748px;
+    height: 802px;
+    text-align: center;
+    .redStatus{
+      margin-top: 125px;
+      width: 400px;
+      height: 400px;
+    }
+  }
+  .open_red{
+     background: url('/images/newicon/red_1.png') no-repeat;
+    width: 668px;
+    height: 920px;
+    text-align: center;
+    position: relative;
+    .money,.goBtn{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .money{
+      font-family: PingFangSC-Semibold;
+      font-size: 90px;
+      color: #F70028;
+       top: 191px;
+       width: 100%;
+    }
+    .goBtn{
+      bottom: 120px;
+      width: 380px;
+      height: 111px;
+      line-height: 111px;
+      background: #FFD42D;
+      font-family: PingFangSC-Medium;
+      font-size: 34px;
+      color: #2C2C2C;
+      text-align: center;
+      border-radius: 100px;
+    }
+  }
+  .protocal {
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #FFFFFF;
+     opacity: 0.65;
+      letter-spacing: 1.4px;
+    line-height: 33px;
+    text-align: center;
+    margin: 132px auto 30px;
+    display: inline-block;
+    .checkBox {
+      display: inline-block;
+      width: 37px;
+      height: 37px;
+      vertical-align: middle;
+      margin-right: 13px;
+      transform: translateY(-2px);
+      @extend %bg_icon_home;
+      background-position: -338px -81px;
+      margin-bottom: 3px;
+    }
+    .checkBox.checked {
+       background-position: -393px -81px;
+    }
+  }
+
+}

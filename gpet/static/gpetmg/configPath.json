@@ -1,0 +1,23 @@
+{
+  "prod":{
+    "accessPath":"/gpetmg",
+    "serverPath":{
+      "originName":"https://gpetprd.gemii.cc",
+      "imgPath":"/gpetmg"
+    }
+  },
+  "dev":{
+    "accessPath":"/gpetmg",
+    "serverPath":{
+      "originName":"https://gpetdev.gemii.cc",
+      "imgPath":"/gpetmg"
+    }
+  },
+  "local":{
+    "accessPath":"/",
+    "serverPath":{
+      "originName":"https://gpetdev.gemii.cc",
+      "imgPath":""
+    }
+  }
+}

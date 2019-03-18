@@ -1,0 +1,56 @@
+/* 修改样式 */
+.datepicker-modal{
+    z-index: 19999 !important;
+}
+.datepicker.ios{
+    border-radius: 20px 20px 0 0;
+}
+.datepicker.ios .datepicker-content {
+    padding: 0px 40px 200px 40px;
+}
+
+.datepicker.ios .datepicker-navbar {
+    border: 0 none !important;
+    top: auto !important;
+    bottom: 0 !important;
+}
+
+.datepicker .datepicker-navbar-btn {
+    padding: 0 !important;
+}
+.datepicker.ios .datepicker-navbar-btn{
+    color: #FFFFFF !important;
+}
+
+.datepicker .datepicker-navbar-btn:nth-child(1) {
+    width: 224px;
+    height: 100px;
+    line-height: 100px;
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #FFFFFF !important;
+    background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+    border-radius: 100px;
+    text-align: center;
+    margin: 0 20px 32px 0;
+}
+
+.datepicker .datepicker-navbar-btn:nth-child(2) {
+    display: none !important;
+}
+
+.datepicker .datepicker-scroll>li {
+    font-family: PingFangSC-Regular !important;
+    font-size: 36px !important;
+    color: #344658 !important;
+    height: 80px !important;
+    line-height: 80px !important;
+}
+
+.datepicker .datepicker-viewport{
+    height: 416px !important;
+}
+
+.datepicker.ios .datepicker-wheel{
+    height: 80px !important;
+}

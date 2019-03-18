@@ -1,0 +1,185 @@
+@import '../../../assets/css/public.scss';
+%starBgTitle{
+  background: url('/images/bj/star_title.png') no-repeat;
+}
+.star-wtapper {
+  width: 100%;
+  background-image: linear-gradient(9deg, #E53344 5%, #F11522 90%, #F64148 97%);
+  .icon_star {
+    display: inline-block;
+    @include widthHight(50, 50);
+    background: url('/images/newicon/star_big.png') no-repeat;
+    background-size: 50px 50px;
+    margin-right: 6px;
+  }
+  .title {
+    @include widthHight(750, 301);
+    @extend %starBgTitle;
+    background-position: -5px -5px;
+  }
+  .content {
+    width: 710px;
+    background: #FFFFFF;
+    box-shadow: 5px 13px 12px 0 #DE1624;
+    @extend %font-30-333-Regular;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 73px 50px;
+    .content-tips {
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 55px;
+    }
+    .content-tips-other{
+      @extend %starBgTitle;
+      @include widthHight(540,90);
+      background-position: -10px -331px;
+       margin: 40px auto;
+    }
+    table {
+      width: 608px;
+      border-collapse: separate;
+      letter-spacing: 1.4px;
+      margin: 0 auto;
+      thead th, tbody td {
+        height: 109px;
+        vertical-align: middle;
+      }
+      thead th {
+        font-size: 34px;
+      }
+      tbody td {
+        &:nth-child(1) {
+          text-align: left;
+          padding: 0 36px;
+          width: 70%;
+          .star {
+            float: left;
+            margin-top: 10px;
+          }
+          .des {
+            color: #8C949D;
+            font-size: 26px;
+            text-decoration: underline;
+            float: right;
+            margin-top: 15px;
+          }
+        }
+        &:nth-child(2) {
+          width: 30%;
+        }
+      }
+      thead th, tbody td {
+        border-top: 2px solid #D8D8D8;
+        border-right: 2px solid #D8D8D8;
+      }
+      thead th:first-child, tbody td:first-child {
+        border-left: 2px solid #D8D8D8;
+        text-align: left;
+        padding-left:36px;
+      }
+      thead th:last-child, tbody td:last-child {
+        border-right: 2px solid #D8D8D8;
+      }
+      tbody tr:last-child td {
+        border-bottom: 2px solid #D8D8D8;
+      }
+      thead tr:first-child th:first-child {
+        border-top-left-radius: 20px;
+      }
+      thead tr:first-child th:last-child {
+        border-top-right-radius: 20px;
+      }
+      tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 20px;
+      }
+      tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 20px;
+
+      }
+
+    }
+  }
+  .questions {
+    padding: 54px 28px 49px 34px;
+    .question-title {
+      margin-bottom: 20px;
+      .line {
+        display: inline-block;
+        @include widthHight(10, 32);
+        background: #FFB424;
+        margin-right: 13px;
+      }
+      .text {
+        font-family: PingFangSC-Medium;
+        font-size: 34px;
+        color: #FFFFFF
+      }
+    }
+    .question-content {
+      font-family: PingFangSC-Medium;
+      font-size: 30px;
+      color: #FFFFFF;
+      .question-item {
+        margin-bottom: 40px;
+      }
+      .item {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 30px;
+        color: #fff;
+        width: 100%;
+        .num {
+          width: 40px;
+        }
+        .text {
+          width: calc(100% - 40px);
+        }
+
+      }
+      .question {
+        font-family: PingFangSC-Medium;
+      }
+      .answer {
+        font-family: PingFangSC-Regular;
+      }
+    }
+  }
+  .footer {
+    height: 160px;
+    background: #F7F8F9;
+    width: 100%;
+    text-align: center;
+    .GoLinkBtn {
+      @include btnStyle(368, 100);
+      margin: 30px auto;
+    }
+  }
+
+  /*星级说明*/
+  .starModal {
+    position: relative;
+    width: 708px;
+    padding: 36px 23px;
+    box-sizing: border-box;
+    top: 46%;
+    .starName {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      .name {
+        font-family: PingFangSC-Medium;
+        font-size: 34px;
+        color: #333333;
+        margin-right: 12px;
+      }
+    }
+    .desWord {
+      text-align: left;
+      @extend %font-30-333-Regular;
+      margin: 22px 0;
+    }
+  }
+}

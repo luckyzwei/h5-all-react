@@ -1,0 +1,60 @@
+.swiper-container {
+    width: 750px;
+    height: 100%;
+}
+
+.swiper-container .banner, .banner .bannerButton {
+    position: relative;
+    width: 100%;
+    height: 206px;
+    background: url('/images/bj/icongraphy_bannner.png') no-repeat;
+}
+
+.swiper-container .banner_1 {
+    background: url('/images/banner/pic_banner3.png') no-repeat;
+}
+
+.swiper-container .banner_2 {
+    background-position: -10px -10px;;
+}
+
+.swiper-container .banner_2 .bannerButton {
+    background-position: -10px -462px;
+}
+
+.swiper-container .banner .bannerImg {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.swiper-container .banner_3 {
+    background-position: -10px -236px;
+}
+
+.swiper-container .banner .bannerButton {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    animation: drift .5s infinite;
+}
+
+#banner-swiper .swiper-pagination-bullet-active {
+    background: #FB4C43;
+}
+
+@keyframes drift {
+    0%,
+    100% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    50% {
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+    }
+}
+

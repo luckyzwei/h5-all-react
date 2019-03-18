@@ -1,0 +1,49 @@
+:global {
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .animated.faster {
+        -webkit-animation-duration: 500ms;
+        animation-duration: 500ms;
+
+      }
+    @-webkit-keyframes shake {
+        from,
+        to {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        25%,
+        75%{
+            -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+        }
+       50%{
+            -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+        }
+    }
+    @keyframes shake {
+        from,
+        to {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        25%,
+        75%{
+            -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+        }
+       50%{
+            -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+        }
+    }
+    .shake :local{
+        -webkit-animation-name: shake;
+        animation-name: shake;
+    }
+}

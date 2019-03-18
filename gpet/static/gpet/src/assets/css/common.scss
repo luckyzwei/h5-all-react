@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-overflow-scrolling: touch;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  display: block;
+  height: 100%;
+  background: #F7F8F9;
+  font-size: 12px;
+  font-family: "PingFang SC";
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input::-webkit-input-placeholder,
+input::-moz-input-placeholder,
+input::-o-input-placeholder {
+  color: #B5BDC6;
+}
+
+textarea::-webkit-input-placeholder,
+textarea::-moz-input-placeholder,
+textarea::-o-input-placeholder {
+  color: #999;
+}
+
+a, button, input, div {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-appearance: none;
+}
+
+.highlight_red {
+  color: #FC5A46;
+}
+
+.verticalCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: auto !important;
+}
+
+.textHide {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.textHide-2 {
+  display: -webkit-box;
+  /* autoprefixer:ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 全屏 modal*/
+
+.modalWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+}
+
+.modalBox {
+  animation: hint 0.5s linear;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalWrapper .writeBox {
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  border-radius: 20px;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 30px;
+  color: #333333;
+}
+
+.modalWrapper .writeBox .closeBtn {
+  right: -62px;
+  top: -52px;
+}
+
+.saveBtn {
+  font-family: PingFangSC-Medium;
+  font-size: 34px;
+  margin: 0 auto;
+  width: 368px;
+  height: 100px;
+  line-height: 100px;
+  background-image: linear-gradient(-136deg, #448AFF 0%, #509DFF 100%);
+  border-radius: 100px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* 选择框 */
+.selectWrapper {
+  position: relative;
+}
+
+.selectWrapper .selectBox {
+  position: relative;
+  float: left;
+  background: #FFFFFF;
+  border-radius: 6px;
+  font-family: PingFangSC-Regular;
+  font-size: 13px;
+  color: #B5BDC6;
+}
+
+.selectWrapper .selectLabel {
+  float: left;
+  text-align: left;
+  line-height: 30px;
+  font-family: PingFangSC-Medium;
+  font-size: 13px;
+  color: #333333;
+}
+
+.selectWrapper .selectBox .selectOption {
+  background: #FFFFFF;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.selectWrapper .selectBox .selectOption .selectTip {
+  color: #333333;
+}
+
+.selectWrapper .selectBox .selectOption em {
+  font-family: PingFangSC-Regular;
+  color: #B5BDC6;
+  display: inline-block;
+  line-height: 30px;
+  font-style: normal;
+  padding-left: 30px;
+  width: 530px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.selectWrapper .selectBox .selectOption .selIcon {
+  float: right;
+}
+
+.selectWrapper .selectBox .selectOption .selIcon::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #999;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  margin-right: 20px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.selectWrapper .selectBox .selectOption .selIcon.selectArrow::after {
+  transition: all 0.2s ease-in-out 0s;
+  transform: rotate(-180deg);
+}
+
+.selectWrapper .selectBox .optionUl {
+  transition: all 0.4s ease-in-out 0s;
+  width: 100%;
+  max-height: 467px;
+  background: #FFFFFF;
+  box-shadow: 0 6px 14px 0 rgba(20, 62, 176, 0.20);
+  border-radius: 2px;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 2;
+  overflow-y: scroll;
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: #333333;
+}
+
+.selectWrapper .selectBox .optionUl li {
+  height: 77px;
+  line-height: 77px;
+  border-bottom: 1px solid #DADEE2;
+  padding-left: 40px;
+}
+
+/*tip model */
+.new-verifyTipBox {
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #FFFFFF;
+  display: inline-block;
+  text-align: center;
+  padding: 13px 40px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  z-index: 1999;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, .75);
+  border-radius: 33px;
+}
+
+/*new-promptBox begin 有确定 取消按钮*/
+.new-promptBox {
+  width: 552px;
+  height: 288px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  font-family: PingFangSC-Regular;
+  font-size: 30px;
+  color: #333333;
+  text-align: center;
+
+  .title {
+    height: 182px;
+    line-height: 182px;
+  }
+
+  .promptBtnBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DADEE2;
+
+    span {
+      display: inline-block;
+      height: 105px;
+      line-height: 105px;
+      border-left: 1px solid #DADEE2;
+      flex: auto;
+    }
+
+    span:nth-child(1) {
+      border-left: none;
+    }
+
+    .confrimBtn {
+      font-family: PingFangSC-Medium;
+      font-size: 32px;
+      color: #4F9CFF;
+    }
+  }
+}
+
+/*new-promptBox end*/
+/*分页样式*/
+
+.pageFooterLoad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  bottom: 0
+}
+
+.ulHeigth {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  min-height: calc(100% - 348px);
+  overflow: auto;
+}
+
+.new_noList {
+  font-size: 32px;
+  color: rgb(153, 153, 153);
+  text-align: center;
+  width: 650px;
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -45px 0 0 -325px;
+}
+
+/*交叉*/
+.icon-cross {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    height: 46px;
+    top: 12px;
+    right: 33px;
+    width: 4px;
+    background: #E0E0E0;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+/*圆交叉*/
+.icon-circlecross {
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: 3px solid #E0E0E0;
+}
