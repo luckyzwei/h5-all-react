@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-overflow-scrolling: touch;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  display: block;
+  height: 100%;
+  background: #F7F8F9;
+  font-size: 12px;
+  font-family: "PingFang SC";
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input::-webkit-input-placeholder,
+input::-moz-input-placeholder,
+input::-o-input-placeholder {
+  color: #B5BDC6;
+}
+
+textarea::-webkit-input-placeholder,
+textarea::-moz-input-placeholder,
+textarea::-o-input-placeholder {
+  color: #999;
+}
+
+a, button, input, div {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-appearance: none;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: #f3f3f3;
+}
+
+.verticalCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: auto !important;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.textHide {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.textHide-2 {
+  display: -webkit-box;
+  /* autoprefixer:ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.downArrow{
+  flex: none;
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 32px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.downArrow::after {
+  display: inline-block;
+  content: " ";
+  height: 20px;
+  width: 20px;
+  border-width: 0 3px 3px 0;
+  border-color: #7F7F7F;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform-origin: center;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  position: absolute;
+  right: 10px;
+}
+/*交叉*/
+.icon-cross {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+.icon-cross::before,.icon-cross::after{
+  content: "";
+  position: absolute;
+  height: 46px;
+  top: 12px;
+  right: 33px;
+  width: 4px;
+  background: #E0E0E0;
+}
+.icon-cross::before {
+  transform: rotate(45deg);
+}
+.icon-cross::after {
+  transform: rotate(-45deg);
+}
+.modalWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+}
+
+.modalBox {
+  animation: hint 0.5s linear;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 错误提示页面 begin*/
+.error-wrapper {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  background: #2ABE76;
+}
+.error-wrapper p {
+  font-family: PingFangSC-Medium;
+  font-size: 34px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 26vh;
+}
+
+.error-wrapper .img404 {
+  width: 290px;
+  height: 222px;
+  margin: 80px auto 0;
+  display: block;
+}
+
+.error-wrapper .refreshBtn {
+  width: 224px;
+  height: 85px;
+  line-height: 85px;
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 100px;
+  font-family: PingFangSC-Medium;
+  font-size: 34px;
+  color: #368EFD;
+  text-align: center;
+  margin: 138px auto 0;
+}
+.des-buttom{
+  font-family: PingFangSC-Regular;
+  font-size: 32px;
+  color: #7F7F7F;
+  text-align: center;
+}
+
+/*错误页面 end*/
+
+/*地址选择器*/
+.am-picker-col-indicator {
+  height: 60px;
+}
+
+.am-picker-col-item {
+  line-height: 60px;
+  height: 60px;
+  font-size: 34px;
+}
+
+.am-picker-col {
+  height: 300px;
+}
+
+.am-picker-popup-item {
+  height: 90px;
+  font-size: 35px;
+}
+

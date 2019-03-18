@@ -1,0 +1,55 @@
+/* 领养页面 添加好友 begin*/
+.adopt-wrapper {
+    width: 100vw;
+    min-height: 100%;
+    background-size: 100%;
+    position: relative;
+    box-sizing: border-box;
+    background: #2ABE76;
+}
+
+.qrcode-content{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 690px;
+    padding: 90px 10px;
+}
+.qrcode-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+.qrcode-title .head_url{
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+    border-radius: 8px;
+}
+.group-word .name{
+    font-family: PingFangSC-Medium;
+    font-size: 38px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.group-word .des{
+    font-family: PingFangSC-Regular;
+    font-size: 32px;
+    color: #7F7F7F;
+}
+.qrcode-img {
+    padding-top: 60px;
+    padding-bottom: 67px;
+    text-align: center;
+}
+.qrcode-img .qrcode{
+    width: 500px;
+    height: 500px;
+}
+
+/* 领养页面 添加好友 end*/
